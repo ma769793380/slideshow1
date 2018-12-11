@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.window {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.images {
+    position: relative;
+}
+.images > img {
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    top: 0;
+}
+.images > img.current {
+    left: 0;
+    transform: translateX(0);
+    z-index: 1;
+}
+.images > img.leave {
+    transform: translateX(-100%);
+}
+.images > img.enter {
+    transform: translateX(100%);
+}
